@@ -1,0 +1,25 @@
+#include <stdio.h>
+int digitsum (int);
+  int main()
+{
+  int ds;
+   int n;
+   printf("enter number");
+   scanf ("%d", &n);
+     ds = digitsum(n);
+   printf(" sum of digits using recursion is %d\n", ds);
+  
+   return 0;
+}
+
+  int digitsum (int num)
+{
+   int sum = 0;
+    int remainder;
+  if (num!=0)
+ {
+  remainder = num%10;
+  sum = remainder+digitsum(num/10);
+  }
+ return sum;
+}
